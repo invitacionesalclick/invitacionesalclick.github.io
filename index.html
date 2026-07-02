@@ -8,25 +8,28 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #363344;
+         
+     
+            
+         
+         
             font-family:  sans-serif;
             
         }
+.splash {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #363344; 
+    width: 100vw;
+            height: 100vh;
+            
+        }
 
-        h1 {
-            font-size: 56px;
+        
+
+        h1.title {
+            font-size: 74px;
             color: #efefef;
             font-weight: 200;
             text-align: center;
@@ -36,6 +39,24 @@
     </style>
 </head>
 <body>
-    <h1>Invitaciones <br>al Click</h1>
+    <h1 class='title'>Invitaciones <br>al Click</h1>
+    <script>
+    function startTitleBlink() {
+    const title = document.querySelector("h1.title");
+    if (!title) return;
+
+    title.style.transition = "color 0.9s ease-in-out";
+
+    let toggle = false;
+
+    setInterval(() => {
+        toggle = !toggle;
+        title.style.color = toggle ? "#ddddff" : "#efefef";
+    }, 900);
+}
+
+// Start the animation
+startTitleBlink();
+        </script>
 </body>
 </html>
