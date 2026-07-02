@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitaciones al Click</title>
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
          
      
             
-         
+          overflow-y: scroll;
+    scroll-snap-type: y mandatory;
          
             font-family:  sans-serif;
             
+        }
+        .snap{
+              scroll-snap-align: start;
         }
 .screen{
       width: 100vw;
@@ -23,6 +27,7 @@
     display: flex;
             justify-content: center;
             align-items: center;
+    
 }
         
 .splash {
@@ -32,7 +37,7 @@
             background: #242533; 
 width: 100vw;
 height: 100vh;
-            
+   
         }
 
         
@@ -48,10 +53,10 @@ height: 100vh;
     </style>
 </head>
 <body>
-    <div class='splash'>
+    <div class='splash snap'>
     <h1 class='title'>Invitaciones <br>al Click</h1>
     </div>
-  <div class='screen'>
+  <div class='screen snap'>
       <div>
     <p>opciones...</p>
       </div>
