@@ -21,8 +21,9 @@
             
         }
         .snap{
-               height: 80vh;
-    scroll-snap-align: center;
+               height: 90vh;
+scroll-snap-align: center;
+    scroll-snap-stop: always;
         }
 .screen{
       width: 100vw;
@@ -31,6 +32,7 @@
     display: flex;
             justify-content: center;
             align-items: center;
+    color:#efefef;
     
 }
         
@@ -60,14 +62,18 @@ width: 100vw;
     <div class='splash snap'>
     <h1 class='title'>Invitaciones <br>al Click</h1>
     </div>
-  <div class='screen snap'>
+  
+    <div class='screen snap'>
       <div>
     <p>opciones...</p>
       </div>
+       </div>
+
+    <div class='screen snap'>
       <div>
-    <p>opciones...</p>
+    <p>más opciones...</p>
       </div>
-      </div>
+       </div>
 
     
     <script>
