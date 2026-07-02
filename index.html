@@ -73,12 +73,16 @@ width: 100vw;
         nav.social a{
 color:white;
             text-decoration:none;
-            font-size:32px;
+          
+        }
+        nav.social a img{
+            width:20px;
+            height:auto;
         }
     </style>
 </head>
 <body>
-    <header><nav class='social'><a href='https://www.instagram.com/invitaciones.alclick'>IG</a></header>
+    <header><nav class='social'><a href='https://www.instagram.com/invitaciones.alclick'><img src='img/instagram.svg'></a></header>
     <div class='splash snap'>
     <h1 class='title'>Invitaciones <br>al Click</h1>
     </div>
@@ -96,7 +100,12 @@ color:white;
        </div>
 
     
-    <script>
+
+
+
+    <script type="text / javascript">
+
+
     function startTitleBlink() {
     const title = document.querySelector("h1.title");
     if (!title) return;
@@ -110,9 +119,7 @@ color:white;
         title.style.color = toggle ? "#ccccff" : "#ffcccc";
     }, 1900);
 }
-
-// Start the animation
-startTitleBlink();
+ 
         </script>
 </body>
 </html>
