@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
          
-     
+            background: #242533; 
             
           overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -40,9 +40,9 @@ scroll-snap-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #242533; 
+           
 width: 100vw;
- 
+ height:90vh !important;
    
         }
 
@@ -54,7 +54,10 @@ width: 100vw;
             font-weight: 200;
             text-align: center;
             line-height:60px;
-            
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+            text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.40),
+    0 6px 16px rgba(0, 0, 0, 0.28);
         }
         header{
             top:0;
@@ -87,12 +90,37 @@ color:white;
             opacity:1;
             transition:opacity 0.5s ease-in-out;
         }
-    </style>
+
+        .splash .bgimage{
+            position:absolute;
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            width:100%;
+            height:100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .splash .bgimage img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+</style>
 </head>
 <body>
-    <header><nav class='social'><a target='_blank' alt='visitanos en Instagram' href='https://www.instagram.com/invitaciones.alclick'><img src='img/instagram.svg'></a></header>
+    <header>
+        <nav class='social'>
+            <a target='_blank' alt='visitanos en Instagram' href='https://www.instagram.com/invitaciones.alclick'>
+                <img src='img/instagram.svg'>
+            </a></nav>
+        </header>
     <div class='splash snap'>
+        <div class='bgimage'><img src='fotos/fotoMain1.jpg'></div>
+        <div >
     <h1 class='title'>Invitaciones <br>al Click</h1>
+    </div>
     </div>
   
     <div class='screen snap'>
@@ -112,23 +140,34 @@ color:white;
 
 
 
-    <script type="text / javascript">
+    <script  type="text/javascript">
 
 
     function startTitleBlink() {
     const title = document.querySelector("h1.title");
     if (!title) return;
-
-    title.style.transition = "color 0.9s ease-in-out";
+let ms=1000;
+    title.style.transition = `color ${ms}ms ease-in-out`;
 
     let toggle = false;
 
     setInterval(() => {
         toggle = !toggle;
-        title.style.color = toggle ? "#ccccff" : "#ffcccc";
-    }, 1900);
+        title.style.color = toggle ? "#ffffff" : "#cccccc";
+    }, ms);
 }
- 
+//startTitleBlink();
+
+
+
+
+
+function linkLabels(){
+    [document.querySelectorAll('.linkLabel')].forEach(linkLabel);
+    function linkLabel(cont){
+        let label=cont.getAttribute('name');
+    }
+}
         </script>
 </body>
 </html>
